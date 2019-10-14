@@ -13,9 +13,7 @@ $query = "INSERT INTO users VALUES ('$_POST[username]', '$email', '$_POST[addres
   '$_POST[state]', '$_POST[zip]', '$hashed_password')";
 
 $result = pg_query($db_connection, $query);
-if (print pg_last_error($dbconn) == FALSE) {
-  print pg_last_error($dbconn);
-}
+  print pg_result_error($result);
 
 // }
 ?>
