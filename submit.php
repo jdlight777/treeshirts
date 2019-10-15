@@ -10,11 +10,16 @@ $password=$_POST['password'];
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 $email=$_POST['email'];
 $state=$_POST['myList'];
-$query = "INSERT INTO users VALUES ('$_POST[username]', '$email', '$_POST[address]', '$_POST[city]',
-  '$state', '$_POST[zip]', '$hashed_password')";
-
-$result = pg_query($db_connection, $query);
-  print pg_result_error($result);
-
+$q = "SELECT * FROM users WHERE email = '$email'";
+$r = pg_query($db_connection, $q);
+$count = pg_affected_rows($r);
+if ($count>0)
+  $error = 'That email is already registered.';
+else{
+  $query = "INSERT INTO users VALUES ('$_POST[username]', '$email', '$_POST[address]', '$_POST[city]',
+    '$state', '$_POST[zip]', '$hashed_password')";
+  $result = pg_query($db_connection, $query);
+    print pg_result_error($result);
+}
 // }
 ?>

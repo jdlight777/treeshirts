@@ -55,16 +55,16 @@
 												<center>Use the form below to sign up for your account.</center>
 											</div>
 											<div class="col-12">
-												<input type="text" name="username" placeholder="Name" />
+												<input type="text" name="username" placeholder="Name" required pattern = '^[a-zA-Z]*$'/>
                       </div>
 											<div class="col-12">
-												<input type="text" name="email" placeholder="Email Address" />
+												<input type="text" name="email" placeholder="Email Address" required pattern = '^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$'/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="address" placeholder="Address" />
+												<input type="text" name="address" placeholder="Address" required pattern = '^\d+\s[A-z]+\s[A-z]+'/>
                       </div>
                       <div class="col-12">
-												<input type="text" name="city" placeholder="City" />
+												<input type="text" name="city" placeholder="City" required pattern = '^[a-zA-Z]*$'/>
                       </div>
 											<!-- <div class="col-12">
 												<input type="text" name="subject" placeholder="State" />
@@ -261,7 +261,7 @@
 										</script>
 
                       <div class="col-12">
-												<input type="text" name="zip" placeholder="Zip Code" />
+												<input type="text" name="zip" placeholder="Zip Code" required pattern = '^[0-9]{5}$'/>
 											</div>
 											<div class="col-12">
 												<input type="text" name="password" placeholder="Password" />
@@ -314,6 +314,6 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			
 	</body>
 </html>
