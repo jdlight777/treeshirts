@@ -49,7 +49,8 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form id="insert" name="insert" action="submit.php" method="POST">
+									<form id="insert" name="insert" action="signup.php" method="POST">
+										<?php include 'submit.php'; echo "$error";?>
 										<div class="row gtr-50">
 											<div class="col-12">
 												<center>Use the form below to sign up for your account.</center>
@@ -314,6 +315,5 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			
 	</body>
 </html>
