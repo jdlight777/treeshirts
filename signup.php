@@ -56,7 +56,7 @@
 												<center>Use the form below to sign up for your account.</center>
 											</div>
 											<div class="col-12">
-												<input type="text" name="username" placeholder="Name" required pattern = '^[a-zA-Z]*$'/>
+												<input type="text" name="username" placeholder="Name" required pattern = '^[a-zA-Z]*$' required pattern = '/^$|\s+/'/>
                       </div>
 											<div class="col-12">
 												<input type="text" name="email" placeholder="Email Address" required pattern = '^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$'/>
@@ -135,7 +135,6 @@
 
 												<div class="custom-select" style="width:200px;">
 												<select name = "myList">
-													<option value = "yolo">State</option>
 													<option value = "Alabama">Alabama</option>
 													<option value = "Alaska">Alaska</option>
 													<option value = "Arizona">Arizona</option>
@@ -265,7 +264,7 @@
 												<input type="text" name="zip" placeholder="Zip Code" required pattern = '^[0-9]{5}$'/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="password" placeholder="Password" />
+												<input type="text" name="password" placeholder="Password" required pattern = '/.*\S.*/'/>
 											</div>
                       <br>
 											<div class="col-12">
