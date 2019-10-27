@@ -1,13 +1,21 @@
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
 
+require_once('path/to/PHPMailer/src/Exception.php');
+require_once('path/to/PHPMailer/src/PHPMailer.php');
+require_once('path/to/PHPMailer/src/SMTP.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
 require 'vendor/autoload.php';
-
+$dbhost = "ec2-174-129-220-12.compute-1.amazonaws.com";
+$dbport = "5432";
+$dbname = "da92c70sm552i5";
+$dbuser = "ssrokyoydqyfei";
+$dbuser = "a444cf799a4f5fb35284fa8442d4e831b25348ef1ac645da8a48c7449578984c";
+$password = '$_POST[password]';
+$hashed_pass = password_hash($password, PASSWORD_DEFAULT);
 // Instantiation and passing `true` enables exceptions
 $mail = new PHPMailer(true);
 
