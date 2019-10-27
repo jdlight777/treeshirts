@@ -14,6 +14,7 @@ $state=$_POST['myList'];
 $q = "SELECT * FROM users WHERE email = '$email'";
 $r = pg_query($db_connection, $q);
 $count = pg_affected_rows($r);
+//hi
 if ($count>0){
   $error = 'That email is already registered.';
   echo($error);

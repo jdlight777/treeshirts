@@ -264,7 +264,7 @@
 												<input type="text" name="zip" placeholder="Zip Code" required pattern = '^[0-9]{5}$'/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="password" placeholder="Password" required pattern = '/.*\S.*/'/>
+												<input type="text" name="password" placeholder="Password" />
 											</div>
                       <br>
 											<div class="col-12">
