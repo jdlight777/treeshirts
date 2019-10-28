@@ -2,9 +2,9 @@
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 
-require_once('path/to/PHPMailer/src/Exception.php');
-require_once('path/to/PHPMailer/src/PHPMailer.php');
-require_once('path/to/PHPMailer/src/SMTP.php');
+// require_once('path/to/PHPMailer/src/Exception.php');
+// require_once('path/to/PHPMailer/src/PHPMailer.php');
+// require_once('path/to/PHPMailer/src/SMTP.php');
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
@@ -15,7 +15,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    //$mail->SMTPDebug = 4;                      // Enable verbose debug output
+    $mail->SMTPDebug = 4;                      // Enable verbose debug output
     $mail->isSMTP();
     $mail->SMTPAuth = true;                                         // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
@@ -32,8 +32,8 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Thank you for signing up!';
-    $mail->Body    = 'Welcome!';
+    $mail->Subject = 'Contact Us';
+    $mail->Body    = $_POST['message'];
     $mail->addAddress($_POST['email']);
     $mail->send();
     echo 'Message has been sent';
@@ -42,5 +42,5 @@ try {
     echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }
 
-        }
+
 ?>
