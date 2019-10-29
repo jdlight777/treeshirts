@@ -34,7 +34,7 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Contact Us';
     $mail->Body    = $_POST['message'];
-    $mail->addAddress($_POST['email']);
+    $mail->addAddress('treeshirts101@gmail.com');
     $mail->send();
     echo 'Message has been sent';
   }
