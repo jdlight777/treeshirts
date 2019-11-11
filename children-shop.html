@@ -177,149 +177,25 @@
 
 				</footer>
 		  </div>
-		<!-- END GRID -->
-		<!-- BitCoin converter from: https://code.sololearn.com/WudsE4unraD0/#js -->
 		</div>
-		<div class="container">
-            <div class="row">
-                <table>
-                    <tr> <!-- Main Table Header -->
-                        <th colspan="3" class="hd1"><b><u>Bitcoin Conversions</u></b></th>
-                    </tr>
-                    <tr><!-- Subtable Headers -->
-                        <th><b>Bitcoin</b></th>
-                        <th><b>Currency</b></th>
-                        <th><b>Amount</b></th>
-                    </tr>
-                    <tr> <!-- USD Inputs and Values -->
-                        <td><input type="number" id="usdInput" oninput="bitTypeUsd()" placeholder="Enter Amount" /></td>
-                        <td class="cValue" id="monetaryUsd"><b>USD - United States Dollar</b></td>
-                        <td  id="usdValue"><input placeholder="&#x24;0.00" readonly /></td>
-                    <tr> <!-- EUR Inputs and Values -->
-                        <td><input type="number" id="eurInput" oninput="bitTypeEur()" placeholder="Enter Amount" /></td>
-                        <td class="cValue" id="monetaryEur"><b>EUR - Euro</b></td>
-                        <td  id="eurValue"><input placeholder="&#x20ac;0.00" readonly /></td>
-                    </tr>
-                      <tr> <!-- CNY - Chinese Yua Inputs and Values -->
-                        <td><input type="number" id="cnyInput" oninput="bitTypeCny()" placeholder="Enter Amount" /></td>
-                        <td class="cValue" id="monetaryCny"><b>Chinese Yuan</b></td>
-                        <td  id="cnyValue"><input placeholder="&#xa5;0.00" readonly /></td>
-                    </tr>
-                    <tr> <!-- Added note and Disclaimer to bottom of table -->
-                        <td colspan="3" class="note"><p>Note: 1 Bitcoin = 100,000,000 or 0.00000001 Satoshi<br>Disclaimer: Currency values DO NOT reflect real-time quotes.</p></td>
-                    </tr>
-                </table>
-              <p id="bitTitle"></p><!-- Locations of error message -->
-            </div>
-
-
-			<script type = "text/javascript">
-				// USD - United States Dollar
-					function bitTypeUsd() {
-						// indicate that the code should be executed in "strict mode" so no undeclared variables are being used
-						"use strict";
-						// Declares variables and maintains a fixed 8 digit decimal place
-						var bitcoin = 1;
-						var currency = 1320.39;
-						var usd = document.getElementById('usdInput').value;
-						var usdDollar = usd * (bitcoin * currency);
-						var amount = document.getElementById('usdValue');
-						amount.innerHTML = "&#x24;" + usdDollar.toFixed(2);
-						/* Formated numbers to currency with commas */
-						amount.innerHTML = usdDollar.toLocaleString(undefined, {style: 'currency', currency: 'USD', minimumFractionDigits: 2, maximumFractionDigits: 2});
-						// Checks if value is entered. If so, change currency to reflect price of one bitcoin in current currency
-						if (usd) {
-							document.getElementById('monetaryUsd').innerHTML = "&#x24;" + "1,320.39";
-						} else if (!usd) {
-							document.getElementById('monetaryUsd').innerHTML = "USD - United States Dollar";
-						}
-						// Adds error message, border to cells, prevents currency changes when error is displayed, and maintains border around amount cell
-						if (usd === '.') {
-							document.getElementById('usdValue').innerHTML = "&#x24;" + "0.00";
-						} else if (isNaN(usd)) {
-							document.getElementById('usdInput').style.border = "thick solid #FF0000";
-							document.getElementById('usdValue').style.border = "thick solid #FF0000";
-							document.getElementById('usdValue').innerHTML = "&#x24;" + "0.00";
-							document.getElementById('monetaryUsd').innerHTML = "USD - United States Dollar";
-							document.getElementById('bitTitle').innerHTML = "Numeric and Decimals Only!";
-						} else if (usd === "") {
-							document.getElementById('usdInput').style.border = "#000000";
-							document.getElementById('usdValue').removeAttribute('style');
-							document.getElementById('bitTitle').innerHTML = "";
-						}
-					}
-
-					// EUR - Euro
-					function bitTypeEur() {
-						// indicate that the code should be executed in "strict mode" so no undeclared variables are being used
-						"use strict";
-						// Declares variables and maintains a fixed 8 digit decimal place
-						var bitcoin = 1;
-						var currency = 1020.19;
-						var eur = document.getElementById('eurInput').value;
-						var eurDollar = eur * (bitcoin * currency);
-						var amount = document.getElementById('eurValue');
-						amount.innerHTML = "&#x20ac;" + eurDollar.toFixed(2);
-						/* Formated numbers to currency with commas */
-						amount.innerHTML = eurDollar.toLocaleString(undefined, {style: 'currency', currency: 'EUR', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-						// Checks if value is entered. If so, change currency to reflect price of one bitcoin in current currency
-						if (eur) {
-							document.getElementById('monetaryEur').innerHTML = "&#x20ac;" + "1,020.19";
-						} else if (!eur) {
-							document.getElementById('monetaryEur').innerHTML = "EUR - Euro";
-						}
-						// Adds error message, border to cells, prevents currency changes when error is displayed, and maintains border around amount cell
-						if (eur === ".") {
-							document.getElementById('eurValue').innerHTML = "&#x20ac;" + "0.00";
-						} else if (isNaN(eur)) {
-							document.getElementById('eurInput').style.border = "thick solid #FF0000";
-							document.getElementById('eurValue').style.border = "thick solid #FF0000";
-							document.getElementById('eurValue').innerHTML = "&#8364;" + "0.00";
-							document.getElementById('monetaryEur').innerHTML = "EUR - Euro";
-							document.getElementById('bitTitle').innerHTML = "Numeric and Decimals Only!";
-						} else if (eur === "") {
-							document.getElementById('eurInput').style.border = "#000000";
-							document.getElementById('eurValue').removeAttribute('style');
-							document.getElementById('bitTitle').innerHTML = "";
-						}
-					}
-
-					// CNY - Chinese Yuan
-					function bitTypeCny() {
-						// indicate that the code should be executed in "strict mode" so no undeclared variables are being used
-						"use strict";
-						// Declares variables and maintains a fixed 8 digit decimal place
-						var bitcoin = 1;
-						var currency = 7792.80;
-						var cny = document.getElementById('cnyInput').value;
-						var cnyDollar = cny * (bitcoin * currency);
-						var amount = document.getElementById('cnyValue');
-						amount.innerHTML = "&#xa5;" + cnyDollar.toFixed(2);
-						/* Formated numbers to currency with commas */
-					amount.innerHTML = cnyDollar.toLocaleString(undefined, {style: 'currency', currency: 'CNY', minimumFractionDigits: 2, maximumFractionDigits: 2 });
-						// Checks if value is entered. If so, change currency to reflect price of one bitcoin in current currency
-						if (cny) {
-							document.getElementById('monetaryCny').innerHTML = "&#xa5;" + "7,792.80";
-						} else if (!cny) {
-							document.getElementById('monetaryCny').innerHTML = "CNY - Chinese Yuan";
-						}
-						// Adds error message, border to cells, prevents currency changes when error is displayed, and maintains border around amount cell
-						if (cny === ".") {
-							document.getElementById('cnyValue').innerHTML = "&#xa5;" + "0.00";
-						} else if (isNaN(cny)) {
-							document.getElementById('cnyInput').style.border = "thick solid #FF0000";
-							document.getElementById('cnyValue').style.border = "thick solid #FF0000";
-							document.getElementById('cnyValue').innerHTML = "&#xa5;" + "0.00";
-							document.getElementById('monetaryCny').innerHTML = "CNY - Chinese Yuan";
-							document.getElementById('bitTitle').innerHTML = "Numeric and Decimals Only!";
-						} else if (cny === "") {
-							document.getElementById('cnyInput').style.border = "#000000";
-							document.getElementById('cnyValue').removeAttribute('style');
-							document.getElementById('bitTitle').innerHTML = "";
-						}
-					}
-			</script>
-        </div>
+		<!-- END GRID -->
+		
+		<!-- BitCoin converter from: https://bitcoinaverage.com/en/widgets/conversion -->
+		<h3><b>Bitcoin-USD Converter: </b></h3>
+		<div id="divWidgetAreaConversion" style="min-width:280px !important; height:220px !important;"><script>var typeChart='conversion';
+			var w_baseCurrency = new Array(); var w_targetCurrency = new Array(); w_baseCurrency[0]="BTC"; w_targetCurrency[0]="USD"; var widgetStyle={};
+			widgetStyle["bgColor"]="transparent";
+			widgetStyle["backgroundColor"]="#969696";
+			widgetStyle["bgTransparent"]="transparent";
+			widgetStyle["fontSize"]="16px";
+			widgetStyle["fontFamily"]="arial";
+			widgetStyle["fontColor"]="#000000";
+			widgetStyle["borderWidth"]="0px";
+			widgetStyle["borderColor"]="none";
+			widgetStyle["cornerStyle"]="round";
+			widgetStyle["lastUpdateTime"]="none";
+			widgetStyle["chartStyle"]="none";
+		</script><meta charset="UTF"><script src="https://bitcoinaverage.com/vendor/jquery/dist/jquery.min.js"></script><script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script><script src="https://bitcoinaverage.com/js/widgetGenerator/widgetUserScript.js"></script></div>
 
 		<!-- END MAIN -->
 
