@@ -39,6 +39,7 @@ else{
 
     try {
         //Server settings
+        header('Location: memberpage.php');
         $mail->SMTPDebug = 4;                      // Enable verbose debug output
         $mail->isSMTP();
         $mail->SMTPAuth = true;                                         // Send using SMTP
