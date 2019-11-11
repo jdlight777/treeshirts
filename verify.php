@@ -6,7 +6,7 @@ $q = "SELECT * FROM users WHERE email = '$email'";
 $r = pg_query($db_connection, $q);
 $row = pg_fetch_assoc($r);
 	if (password_verify($password, $row['password'])){
-		header('Location: memberpage.php');
+		header('Location: member-home.html');
 	}
 	else {
 		header('Location: fail.php');
