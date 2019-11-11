@@ -44,7 +44,7 @@
 
 					<header class="special container">
 						<span class="icon solid fa-envelope"></span>
-						<h2>Log In (or Sign Up!)</h2>
+						<h2>Wrong email or password, try again</h2>
 					</header>
 
 					<!-- One -->

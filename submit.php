@@ -4,6 +4,7 @@
 // $state = '';
 // $zip = '';
 // if(isset($_GET["password"])) {
+ini_set('display_errors',0);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 // Load Composer's autoloader
@@ -27,7 +28,7 @@ else{
   $query = "INSERT INTO users VALUES ('$_POST[username]', '$email', '$_POST[address]', '$_POST[city]',
     '$state', '$_POST[zip]', '$hashed_password')";
   $result = pg_query($db_connection, $query);
-    print pg_result_error($result);
+    // print pg_result_error($result);
     // require_once('path/to/PHPMailer/src/Exception.php');
     // require_once('path/to/PHPMailer/src/PHPMailer.php');
     // require_once('path/to/PHPMailer/src/SMTP.php');

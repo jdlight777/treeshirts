@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Sign In</title>
+		<title>Welcome!</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -43,8 +43,8 @@
 				<article id="main">
 
 					<header class="special container">
-						<span class="icon solid fa-envelope"></span>
-						<h2>Log In (or Sign Up!)</h2>
+						<span class="icon solid fa-heart"></span>
+						<h2>Welcome!</h2>
 					</header>
 
 					<!-- One -->
@@ -52,27 +52,10 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form id="insert" name="insert" action="verify.php" method="POST">
+									<form>
 										<div class="row gtr-50">
-											<div class="col-12">
-												<center>Use the form below to log into your account.</center>
-											</div>
-											<div class="col-12">
-												<input type="text" name="email" placeholder="Username (or email)" />
-											</div>
-											<div class="col-12">
-												<input type="password" name="password" placeholder="Password" />
-                      </div>
-                      <br>
-											<div class="col-12">
-												<ul class="buttons">
-													<li><a href="signup.html"> <input type="submit" class="special" value="Sign In" /></a></li>
-												</ul>
 											</div>
                       <br>
-                      <div class="col-12">
-                        <center>Don't have an account? Sign up <a href="signup.php">here</a>!</center>
-                      </div>
 										</div>
 									</form>
 								</div>
@@ -80,24 +63,6 @@
 						</section>
 
 				</article>
-
-			<!-- Footer -->
-				<!-- <footer id="footer">
-
-					<ul class="icons">
-						<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
-						<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-				</footer> -->
-
 		</div>
 
 		<!-- Scripts -->

@@ -51,7 +51,7 @@
 							<!-- Content -->
 								<div class="content">
 									<form id="insert" name="insert" action="signup.php" method="POST">
-										<?php include 'submit.php'; $error = ''; echo "$error";?>
+										<?php include 'submit.php'; $error = '';?>
 										<div class="row gtr-50">
 											<div class="col-12">
 												<center>Use the form below to sign up for your account.</center>
@@ -265,7 +265,7 @@
 												<input type="text" name="zip" placeholder="Zip Code" required pattern = '^[0-9]{5}$'/>
 											</div>
 											<div class="col-12">
-												<input type="text" name="password" placeholder="Password" />
+												<input type="password" name="password" placeholder="Password" />
 											</div>
                       <br>
 											<div class="col-12">
