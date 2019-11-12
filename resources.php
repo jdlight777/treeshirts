@@ -6,6 +6,17 @@
 
 	Tree-Shirts by Daniel Rayder (dsr8cm), Nikhil Bharani (nb9ez), and John Light (jdl4cx)
 -->
+<?php
+session_start();
+
+if ( isset( $_SESSION['email'] ) ) {
+    // Grab user data from the database using the user_id
+    // Let them access the "logged in only" pages
+} else {
+    // Redirect them to the login page
+    header("Location: index.html");
+}
+?>
 <html>
 	<head>
 		<title>Additional Resources</title>
