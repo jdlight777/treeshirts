@@ -14,7 +14,7 @@ if ( isset( $_SESSION['email'] ) ) {
     // Let them access the "logged in only" pages
 } else {
     // Redirect them to the login page
-    header('Location: index.php');
+    header('Location: index.html');
 }
 ?>
 <html>
