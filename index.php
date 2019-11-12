@@ -4,6 +4,10 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
+<?php
+session_start();
+session_destroy();
+?>
 <html>
 	<head>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -19,10 +23,10 @@
 			<!-- Header -->
 				<header id="header" class="alt">
 					<h1 id="logo"><img width="25" height="25" src="https://theultralinx.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_400/MTI5MDIzNDYzMjcxNzA1MjE5/mangrove1.webp">
-<a href="index.html">&nbsp&nbsp Tree-shirts <span></span></a></h1>
+<a href="index.php">&nbsp&nbsp Tree-shirts <span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li class="current"><a href="index.html">Welcome</a></li>
+							<li class="current"><a href="index.php">Welcome</a></li>
 							<li><a href="left-sidebar.html">About Us</a></li>
 							<li><a href="contact.html">Contact Us</a></li>
 							<!-- <li class="submenu">

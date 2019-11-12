@@ -14,7 +14,7 @@ if ( isset( $_SESSION['email'] ) ) {
     // Let them access the "logged in only" pages
 } else {
     // Redirect them to the login page
-    header('Location: index.html');
+    header('Location: index.php');
 }
 ?>
 <html>
@@ -31,10 +31,10 @@ if ( isset( $_SESSION['email'] ) ) {
 			<!-- Header -->
 				<header id="header">
 					<h1 id="logo"><img width="25" height="25" src="https://theultralinx.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_400/MTI5MDIzNDYzMjcxNzA1MjE5/mangrove1.webp">
-					<a href="index.html">&nbsp&nbsp Tree-shirts <span></span></a></h1>
+					<a href="index.php">&nbsp&nbsp Tree-shirts <span></span></a></h1>
 					<nav id="nav">
 						<ul>
-							<li ><a href="index.html">Welcome</a></li>
+							<li ><a href="index.php">Welcome</a></li>
 							<li class=""><a href="left-sidebar.html">About Us</a></li>
 							<li ><a href="contact.html">Contact</a></li>
                             <li class="current"><a href="resources.php">Additional Resources</a></li>
