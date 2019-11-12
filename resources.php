@@ -37,7 +37,7 @@ if ( isset( $_SESSION['email'] ) ) {
 							<li ><a href="index.html">Welcome</a></li>
 							<li class=""><a href="left-sidebar.html">About Us</a></li>
 							<li ><a href="contact.html">Contact</a></li>
-                            <li class="current"><a href="resources.html">Additional Resources</a></li>
+                            <li class="current"><a href="resources.php">Additional Resources</a></li>
 
 							<!-- <li class="submenu">
 								<a href="#">Shop</a>

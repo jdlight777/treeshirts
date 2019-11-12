@@ -24,7 +24,7 @@
 							<li><a href="index.html">Welcome</a></li>
               <li><a href="left-sidebar.html">About Us</a></li>
 							<li><a href="contact.html">Contact Us</a></li>
-							<li><a href="resources.html">Additional Resources</a></li>
+							<li><a href="resources.php">Additional Resources</a></li>
 
               <!-- <li class="submenu">
 								<a href="#">Shop</a>
