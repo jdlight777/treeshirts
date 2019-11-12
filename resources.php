@@ -58,8 +58,8 @@ if ( isset( $_SESSION['email'] ) ) {
 									</li>
 								</ul> -->
 							</li>
-							<li class=""><a href="children-shop.html">Shop</a></li>
-							<li><a href="signin.html" class="button primary">Sign In</a></li>
+							<li class=""><a href="children-shop-member.html">Shop</a></li>
+							<li><a href="index.php" class="button primary">Logout</a></li>
 						</ul>
 					</nav>
 				</header>
